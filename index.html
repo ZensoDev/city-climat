@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Formation JS</title>
+    <!-- On peut avoir d'autres méta-données ici -->
+  </head>
+  <body class="ui bg-light-blue-300 grey-700 "> <!-- la première couleur repésente le background et la 2ème le texte -->
+      <link rel="stylesheet" href="./node_modules/material-design-lite/material.min.css">
+      <script src="./node_modules/material-design-lite/material.min.js"></script>
+      <link rel="stylesheet" href="./node_modules/material-design-icons/iconfont/material-icons.css">
+
+      <link rel="stylesheet" href="./node_modules/ui-design/dist/ui-design.css">
+      <link rel="stylesheet" href="./dist/index.css">
+      <script src="./node_modules/ui-design/dist/ui-design.js"></script>
+
+    
+
+
+    <!-- Uses a transparent header that draws on top of the layout's background -->
+<style>
+    /* .demo-layout-transparent {
+      background: url('../assets/demos/transparent.jpg') center / cover;
+    } */
+    .demo-layout-transparent .mdl-layout__header,
+    .demo-layout-transparent .mdl-layout__drawer-button {
+      /* This background is dark, so we set text to white. Use 87% black instead if
+         your background is light. */
+      color: white;
+    }
+    </style>
+    <!-- @component -->
+    <city class="ui col-12 left mdl-layout mdl-js-layout" ></city>
+<!-- @component meteopolution -->
+    <meteopolution class="active frameable mdl-layout__content day">
+      <!-- @component temperature -->
+      <temperature class="ui col-12 col-v-max-4 grey-50"></temperature>
+      <!-- @component climat -->
+      <climat class="mdl-layout__content"></climat>
+      <!-- @component polution -->
+      <polution class="mdl-layout__content"></polution>
+    </meteopolution>
+    
+
+  <script>
+   
+
+  </script>
+  
+  
+  <script src="./dist/index.js"></script>
+
+    <!-- compatibility -->
+    <script>
+      var elements = ["city", "climat", "temperature", "meteopolution", "condition", "polution", "nameApp"];
+      for (var key in elements){
+        window.document.createElement(elements[key]);
+      }
+    </script>
+    <style>
+      city, climat, temperature, meteopolution, condition, polution, nameApp {
+        display: block;
+        width: 100%;
+      }
+    </style>
+
+<!-- <div class="ui col-4 col-center"><button class="ui btn btn-raised mdl-cell mdl-cell--6-col ">MétéoPol</button></div>
+<div class="ui col-4 col-center"><button class="ui btn btn-floating btn-add"></button></div> -->
+  </body>
+</html>

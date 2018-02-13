@@ -1,0 +1,7 @@
+.vscode/
+dist/
+index.json
+index.mdj
+node_modules/
+formulaire.html
+package-lock.json
